@@ -21,7 +21,6 @@ linters:
     - bodyclose
     - cyclop
     - durationcheck
-    - errname
     - errorlint
     - exportloopref
     - forcetypeassert
@@ -40,19 +39,20 @@ linters:
     - predeclared
     - promlinter
     - revive
+    - rowserrcheck
+    - sqlclosecheck
     - stylecheck
     - thelper
     - tparallel
     - unconvert
     - unparam
     - varnamelen
+    - wastedassign
     - wrapcheck
     - wsl
   disable:
-    # disabled for Go 1.19
-    - rowserrcheck
-    - sqlclosecheck
-    - wastedassign
+    # broken?
+    - errname
 
 linters-settings:
   gocognit:

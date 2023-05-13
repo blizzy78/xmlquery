@@ -115,11 +115,7 @@ func parseOptions() (options, error) {
 
 func outputXML(writer stringWriter, node *xmlquery.Node, self bool, color bool, recursive bool) error {
 	if self {
-		if err := outputXMLToBuffer(writer, node, color, recursive); err != nil {
-			return err
-		}
-
-		return nil
+		return outputXMLToBuffer(writer, node, color, recursive)
 	}
 
 	for n := node.FirstChild; n != nil; n = n.NextSibling {
